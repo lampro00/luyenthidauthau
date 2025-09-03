@@ -1,4 +1,4 @@
-// Lấy các phần tử HTML cần thiết
+// Lấy các phần tử HTML cần thiếtqqqqqqqqqqqqqqqqqqq
 const quizDiv = document.getElementById("quiz");
 const submitButton = document.getElementById("submit");
 const resultsDiv = document.getElementById("results");
