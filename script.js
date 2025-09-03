@@ -3,12 +3,14 @@ const quizDiv = document.getElementById("quiz");
 const submitButton = document.getElementById("submit");
 const resultsDiv = document.getElementById("results");
 
+// Biến toàn cục để lưu trữ mảng câu hỏi đã được xáo trộn
+let shuffledQuestions = [];
+
 // Hàm để hiển thị câu hỏi
 function displayQuestions() {
   // Sắp xếp ngẫu nhiên mảng questions và lấy 40 câu đầu tiên
-  const shuffledQuestions = questions
-    .sort(() => 0.5 - Math.random())
-    .slice(0, 40);
+  shuffledQuestions = questions.sort(() => 0.5 - Math.random()).slice(0, 40);
+
   const output = [];
 
   // Duyệt qua từng câu hỏi
@@ -17,7 +19,6 @@ function displayQuestions() {
 
     // Tạo các nút radio cho từng đáp án
     currentQuestion.options.forEach((option) => {
-      console.log(option);
       options.push(
         `<label>
                     <input type="radio" name="question${questionNumber}" value="${option}">
@@ -29,7 +30,7 @@ function displayQuestions() {
     // Thêm câu hỏi và các đáp án vào mảng output
     output.push(
       `<div class="question">
-                <p>Câu ${questionNumber + 1}:${currentQuestion.question}</p>
+                <p>Câu ${questionNumber + 1}: ${currentQuestion.question}</p>
                 <div class="options">${options.join("")}</div>
             </div>`
     );
@@ -41,11 +42,11 @@ function displayQuestions() {
 
 // Hàm chấm điểm
 function checkAnswers() {
-  const questions = quizDiv.querySelectorAll(".question");
+  const questionsElements = quizDiv.querySelectorAll(".question");
   let numCorrect = 0;
 
   // Duyệt qua từng câu hỏi để kiểm tra đáp án
-  questions.forEach((questionEl, questionNumber) => {
+  questionsElements.forEach((questionEl, questionNumber) => {
     const selectedOption = questionEl.querySelector(
       `input[name="question${questionNumber}"]:checked`
     );
@@ -53,7 +54,8 @@ function checkAnswers() {
     // Kiểm tra xem người dùng đã chọn đáp án chưa
     if (selectedOption) {
       const userAnswer = selectedOption.value;
-      const correctAnswer = getCorrectAnswer(questionNumber);
+      // Lấy đáp án đúng từ mảng câu hỏi đã được xáo trộn
+      const correctAnswer = shuffledQuestions[questionNumber].answer;
 
       if (userAnswer === correctAnswer) {
         numCorrect++;
@@ -75,17 +77,7 @@ function checkAnswers() {
 
   // Hiển thị kết quả
   resultsDiv.style.display = "block";
-  resultsDiv.innerHTML = `Bạn đã trả lời đúng ${numCorrect} trên ${questions.length} câu.`;
-}
-
-// Hàm lấy đáp án đúng từ mảng dữ liệu
-function getCorrectAnswer(questionNumber) {
-  // Chúng ta cần tìm câu hỏi tương ứng trong mảng `questions`
-  // Do chúng ta đã xáo trộn câu hỏi, cần tìm lại bằng cách so sánh nội dung câu hỏi
-  const questionText =
-    quizDiv.querySelectorAll(".question p")[questionNumber].textContent;
-  const originalQuestion = questions.find((q) => q.question === questionText);
-  return originalQuestion.answer;
+  resultsDiv.innerHTML = `Bạn đã trả lời đúng ${numCorrect} trên ${questionsElements.length} câu.`;
 }
 
 // Bắt đầu hiển thị câu hỏi khi trang tải xong
