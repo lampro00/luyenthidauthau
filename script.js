@@ -85,3 +85,66 @@ displayQuestions();
 
 // Lắng nghe sự kiện click nút "Nộp bài"
 submitButton.addEventListener("click", checkAnswers);
+
+// Thời gian thi (tính bằng giây), ví dụ 30 phút = 1800 giây
+const totalTime = 1 * 10;
+let timeLeft = totalTime;
+
+// Lấy thẻ div hiển thị đồng hồ
+const timerDisplay = document.getElementById("timer");
+
+// Cập nhật đồng hồ mỗi giây
+const hours = Math.floor(timeLeft / 3600);
+const minutes = Math.floor((timeLeft % 3600) / 60);
+const seconds = timeLeft % 60;
+const displayTime = `${String(hours).padStart(2, "0")}:${String(
+  minutes
+).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+timerDisplay.textContent = displayTime;
+function start() {
+  const countdown = setInterval(() => {
+    if (timeLeft <= 0) {
+      clearInterval(countdown);
+      timerDisplay.textContent = "HẾT GIỜ!";
+      checkAnswers();
+    } else {
+      const hours = Math.floor(timeLeft / 3600);
+      const minutes = Math.floor((timeLeft % 3600) / 60);
+      const seconds = timeLeft % 60;
+
+      // Định dạng hiển thị giờ:phút:giây
+      const displayTime = `${String(hours).padStart(2, "0")}:${String(
+        minutes
+      ).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+
+      timerDisplay.textContent = displayTime;
+      timeLeft--;
+    }
+  }, 1000);
+}
+// const countdown = setInterval(() => {
+//   if (timeLeft <= 0) {
+//     clearInterval(countdown);
+//     timerDisplay.textContent = "HẾT GIỜ!";
+//     submitExam();
+//   } else {
+//     const hours = Math.floor(timeLeft / 3600);
+//     const minutes = Math.floor((timeLeft % 3600) / 60);
+//     const seconds = timeLeft % 60;
+
+//     // Định dạng hiển thị giờ:phút:giây
+//     const displayTime = `${String(hours).padStart(2, "0")}:${String(
+//       minutes
+//     ).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+
+//     timerDisplay.textContent = displayTime;
+//     timeLeft--;
+//   }
+// }, 1000);
+
+// Hàm nộp bài
+function submitExam() {
+  // Ngừng bộ đếm khi nộp bài thủ công
+  checkAnswers();
+}
+submitButton.addEventListener("click", checkAnswers);
