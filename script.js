@@ -78,9 +78,6 @@ function checkAnswers() {
   // Hiển thị kết quả
   resultsDiv.style.display = "block";
   resultsDiv.innerHTML = `Bạn đã trả lời đúng ${numCorrect} trên ${questionsElements.length} câu.`;
-  alert(
-    `Bạn đã trả lời đúng ${numCorrect} trên ${questionsElements.length} câu.`
-  );
 }
 
 // Bắt đầu hiển thị câu hỏi khi trang tải xong

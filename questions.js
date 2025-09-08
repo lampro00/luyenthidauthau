@@ -79,7 +79,7 @@ const questions = [
     question: "Câu 8. Giá đề nghị trúng thầu là gì?",
     options: [
       "A. Là giá dự thầu của nhà thầu ghi trong quyết định phê duyệt kết quả lựa chọn nhà thầu.",
-      "B. Là giá dự thầu của nhà thầu được đề nghị trúng thầu sau khi đã được sửa lỗi, hiệu chỉnh sai lệch",
+      "B. Là giá dự thầu của nhà thầu được đề nghị trúng thầu sau khi đã được sửa lỗi, hiệu chỉnh sai lệch theo yêu cầu của hồ sơ mời thầu, hồ sơ yêu cầu, trừ đi giá trị giảm giá (nếu có)",
       "C. Là giá dự thầu của nhà thầu chưa tính sửa lỗi, hiệu chỉnh sai lệch và giá trị giảm giá (nếu có)",
       "D. Là giá trị ghi trong hợp đồng giữa chủ đầu tư và nhà thầu",
     ],
@@ -135,12 +135,12 @@ const questions = [
       "Câu13. Điều kiện để tổ chức đấu thầu quốc tế lựa chọn nhà thầu thực hiện gói thầu mua sắm hàng hóa gì ?",
     options: [
       "A. Gói thầu mua sắm hàng hóa thông dụng, đơn giản, có sẵn trên thị trường",
-      "B. Gói thầu mua sắm hàng hóa mà hàng hóa đó trong nước sản xuất được và đáp ứng các yêu cầu về kỹ",
-      "C. Gói thầu mua sắm hàng hóa mà hàng hóa đó trong nước không sản xuất được hoặc sản xuất",
-      "D. Gói thầu mua sắm hàng hóa thông dụng đã được nhập khẩu và chào bán tại Việt Nam nhưng hàng hóa",
+      "B. Gói thầu mua sắm hàng hóa mà hàng hóa đó trong nước sản xuất được và đáp ứng các yêu cầu về kỹ thuật, chất lượng, giá nhưng chủ đầu tư yêu cầu phải mua hàng hóa nhập khẩu",
+      "C. Gói thầu mua sắm hàng hóa mà hàng hóa đó trong nước không sản xuất được hoặc sản xuất được nhưng không đáp ứng một trong các yêu cầu về kỹ thuật, chất lượng, giá",
+      "D. Gói thầu mua sắm hàng hóa thông dụng đã được nhập khẩu và chào bán tại Việt Nam nhưng hàng hóa đó trong nước không sản xuất được",
     ],
     answer:
-      "C. Gói thầu mua sắm hàng hóa mà hàng hóa đó trong nước không sản xuất được hoặc sản xuất",
+      "C. Gói thầu mua sắm hàng hóa mà hàng hóa đó trong nước không sản xuất được hoặc sản xuất được nhưng không đáp ứng một trong các yêu cầu về kỹ thuật, chất lượng, giá",
   },
   {
     question: "Câu14. Ngôn ngữ sử dụng đối với đấu thầu quốc tế là gì?",
@@ -350,7 +350,7 @@ const questions = [
   },
   {
     question:
-      "Câu 32. Nội dung nào là tiêu chuẩn đánh giá về năng lực và kinh nghiệm không bắt buộc đối với gói",
+      "Câu 32. Nội dung nào là tiêu chuẩn đánh giá về năng lực và kinh nghiệm không bắt buộc đối với gói thầu mua sắm hàng hóa?",
     options: [
       "A. Kinh nghiệm thực hiện hợp đồng cung cấp hàng hóa tương tự",
       "B. Giá trị tài sản ròng của nhà thầu",
@@ -361,7 +361,7 @@ const questions = [
   },
   {
     question:
-      "Câu 33. Nội dung nào là tiêu chuẩn đánh giá đánh giá về năng lực và kinh nghiệm bắt buộc đối với",
+      "Câu 33. Nội dung nào là tiêu chuẩn đánh giá đánh giá về năng lực và kinh nghiệm bắt buộc đối với gói thầu xây lắp tổ chức đấu thầu rộng rãi không qua mạng?",
     options: [
       "A. Có bản gốc hồ sơ dự thầu",
       "B. Có tên trong danh sách ngắn",
@@ -535,7 +535,7 @@ const questions = [
   },
   {
     question:
-      "Câu 49. Trong các hiệp định dưới đây, hiệp định nào không có quy định về các trường hợp chỉ định",
+      "Câu 49. Trong các hiệp định dưới đây, hiệp định nào không có quy định về các trường hợp chỉ định thầu?",
     options: [
       "A. Hiệp định Đối tác Toàn diện và Tiến bộ Xuyên Thái Bình Dương (CPTPP)",
       "B. Hiệp định thương mại tự do giữa Cộng hòa xã hội chủ nghĩa Việt Nam và Liên minh Châu Âu",
@@ -631,7 +631,7 @@ const questions = [
       "D. Tất cả phương án trên đều sai",
     ],
     answer:
-      "B. Thời điểm bắt đầu không bắt buộc trong giờ hành chính nhưng kết thúc phải trong giờ hành chính",
+      "B. Thời điểm bắt đầu không bắt buộc trong giờ hành chính nhưng kết thúc phải trong giờ hành chính.",
   },
   {
     question:
@@ -1669,7 +1669,7 @@ const questions = [
       "D. Danh sách chính (nhà thầu xếp thứ nhất và nhà thầu xếp thứ 2) và danh sách dự bị (nhà thầu xếp thứ 3 trở đi)",
     ],
     answer:
-      "B. Danh sách chính (nhà thầu xếp thứ nhất) và danh sách nhà thầu không đáp ứng yêu cầu của hồ sơ mời thầu",
+      "A. Danh sách chính (nhà thầu xếp thứ nhất) và danh sách dự bị (nhà thầu xếp thứ 2 trở đi)",
   },
   {
     question:
