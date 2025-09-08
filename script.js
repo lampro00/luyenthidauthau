@@ -87,7 +87,7 @@ displayQuestions();
 submitButton.addEventListener("click", checkAnswers);
 
 // Thời gian thi (tính bằng giây), ví dụ 30 phút = 1800 giây
-const totalTime = 1 * 10;
+const totalTime = 30 * 60;
 let timeLeft = totalTime;
 
 // Lấy thẻ div hiển thị đồng hồ
