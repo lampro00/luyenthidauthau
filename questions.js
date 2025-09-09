@@ -57,9 +57,9 @@ const questions = [
   {
     question: "Câu 6. Theo quy định pháp luật về đấu thầu, đấu thầu là gì?",
     options: [
-      "A. Là quá trình lựa chọn nhà thầu để ký kết, thực hiện hợp đồng cung cấp dịch vụ tư vấn, dịch vụ phi tư",
-      "B. Là quá trình lựa chọn nhà đầu tư để ký kết, thực hiện hợp đồng dự án đầu tư kinh doanh trên cơ sở bảo",
-      "C. Là quá trình lựa chọn đơn vị để thực hiện hợp đồng thông qua các quy trình, thủ tục do pháp luật đấu",
+      "A. Là quá trình lựa chọn nhà thầu để ký kết, thực hiện hợp đồng cung cấp dịch vụ tư vấn, dịch vụ phi tư vấn, mua sắm hàng hóa, xây lắp trên cơ sở bảo đảm cạnh tranh, công bằng, minh bạch, hiệu quả kinh tế và trách nhiệm giải trình",
+      "B. Là quá trình lựa chọn nhà đầu tư để ký kết, thực hiện hợp đồng dự án đầu tư kinh doanh trên cơ sở bảo đảm cạnh tranh, công bằng, minh bạch, hiệu quả kinh tế và trách nhiệm giải trình",
+      "C. Là quá trình lựa chọn đơn vị để thực hiện hợp đồng thông qua các quy trình, thủ tục do pháp luật đấu thầu quy định",
       "D. Phương án A và B đều đúng",
     ],
     answer: "D. Phương án A và B đều đúng",
@@ -578,7 +578,7 @@ const questions = [
     answer: "A. Đấu thầu mà chỉ có nhà thầu nội khối được tham dự",
   },
   {
-    qquestion:
+    question:
       "Câu 53. Theo quy định tại Nghị định số 09/2022/NĐ-CP, cơ quan mua sắm phải tổ chức đấu thầu nội khối, trừ trường hợp nào?",
     options: [
       "A. Không có nhà thầu trong nước tham gia",
@@ -745,7 +745,7 @@ const questions = [
       "D. Chủ đầu tư dành cho nhà thầu tối thiểu 03 ngày làm việc để nhà thầu thực hiện việc làm rõ E-HSDT",
     ],
     answer:
-      "D. Chủ đầu tư dành cho nhà thầu tối thiểu 03 ngày làm việc để nhà thầu thực hiện việc làm rõ E-",
+      "D. Chủ đầu tư dành cho nhà thầu tối thiểu 03 ngày làm việc để nhà thầu thực hiện việc làm rõ E-HSDT",
   },
   {
     question:
