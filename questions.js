@@ -84,7 +84,7 @@ const questions = [
       "D. Là giá trị ghi trong hợp đồng giữa chủ đầu tư và nhà thầu",
     ],
     answer:
-      "B. Là giá dự thầu của nhà thầu được đề nghị trúng thầu sau khi đã được sửa lỗi, hiệu chỉnh sai lệch",
+      "B. Là giá dự thầu của nhà thầu được đề nghị trúng thầu sau khi đã được sửa lỗi, hiệu chỉnh sai lệch theo yêu cầu của hồ sơ mời thầu, hồ sơ yêu cầu, trừ đi giá trị giảm giá (nếu có)",
   },
   {
     question: "Câu 9. Theo quy định pháp luật về đấu thầu, hàng hóa gồm?",
@@ -324,7 +324,7 @@ const questions = [
       "C. Bảo đảm dự thầu hợp lệ",
       "D. Đã thực hiện nghĩa vụ kê khai thuế và nộp thuế",
     ],
-    answer: "D. Đã thực hiện nghĩa vụ kê khai thuế và nộp thuế",
+    answer: "C. Bảo đảm dự thầu hợp lệ",
   },
   {
     question:
@@ -357,7 +357,7 @@ const questions = [
       "C. Doanh thu của nhà thầu",
       "D. Việc thực hiện nghĩa vụ kê khai thuế, nộp thuế",
     ],
-    answer: "B. Giá trị tài sản ròng của nhà thầu",
+    answer: "A. Kinh nghiệm thực hiện hợp đồng cung cấp hàng hóa tương tự",
   },
   {
     question:
@@ -542,7 +542,8 @@ const questions = [
       "C. Hiệp định EVFTA và Hiệp định Thương mại Tự do giữa Việt Nam  và Liên hiệp Vương quốc Anh và",
       "D. Hiệp định Đối tác Kinh tế Toàn diện Khu vực (RCEP)",
     ],
-    answer: "D. Hiệp định Đối tác Kinh tế Toàn diện Khu vực (RCEP)",
+    answer:
+      "C. Hiệp định EVFTA và Hiệp định Thương mại Tự do giữa Việt Nam  và Liên hiệp Vương quốc Anh và",
   },
   {
     question:
@@ -733,7 +734,7 @@ const questions = [
       "C. E-HSMT yêu cầu giá trị bảo đảm dự thầu là 60 triệu đồng",
       "D. E-HSMT yêu cầu giá trị bảo đảm dự thầu là 100 triệu đồng",
     ],
-    answer: "B. E-HSMT yêu cầu giá trị bảo đảm dự thầu là 50 triệu đồng",
+    answer: "A. E-HSMT yêu cầu giá trị bảo đảm dự thầu là 40 triệu đồng",
   },
   {
     question:
@@ -813,7 +814,7 @@ const questions = [
       "C. Doanh thu bình quân 3 năm gần nhất của nhà thầu",
       "D. Các đáp án trên đều đúng",
     ],
-    answer: "D. Các đáp án trên đều đúng",
+    answer: "C. Doanh thu bình quân 3 năm gần nhất của nhà thầu",
   },
   {
     question:
@@ -836,7 +837,7 @@ const questions = [
       "D. Tư cách hợp lệ, nhà thầu không có nhân sự bị tòa án kết án có hành vi vi phạm quy định về đấu thầu gây hậu quả nghiêm trọng, lịch sử không hoàn thành hợp đồng do lỗi của nhà thầu, thực hiện nghĩa vụ kê khai thuế và nộp thuế, kết quả hoạt động tài chính, doanh thu bình quân hằng năm",
     ],
     answer:
-      "C. Tư cách hợp lệ, nhà thầu không có nhân sự bị tòa án kết án có hành vi vi phạm quy định về đấu thầu gây hậu quả nghiêm trọng, trạng thái bị tạm ngừng, chấm dứt tham gia Hệ thống mạng đấu thầu quốc gia, thực hiện nghĩa vụ kê khai thuế và nộp thuế, kết quả hoạt động tài chính, doanh thu bình quân hằng năm",
+      "D. Tư cách hợp lệ, nhà thầu không có nhân sự bị tòa án kết án có hành vi vi phạm quy định về đấu thầu gây hậu quả nghiêm trọng, lịch sử không hoàn thành hợp đồng do lỗi của nhà thầu, thực hiện nghĩa vụ kê khai thuế và nộp thuế, kết quả hoạt động tài chính, doanh thu bình quân hằng năm",
   },
   {
     question:
@@ -980,7 +981,7 @@ const questions = [
       "C. Chào giá trực tuyến theo quy trình rút gọn",
       "D. Các phương án trên đều đúng",
     ],
-    answer: "D. Các phương án trên đều đúng",
+    answer: "C. Chào giá trực tuyến theo quy trình rút gọn",
   },
   {
     question:
@@ -1002,7 +1003,8 @@ const questions = [
       "C. Trước khi có kết quả lựa chọn nhà thầu",
       "D. Phương án A và B đều đúng",
     ],
-    answer: "D. Phương án A và B đều đúng",
+    answer:
+      "B. Trường hợp hồ sơ dự thầu của nhà thầu xếp hạng tiếp theo hết hiệu lực thì Chủ đầu tư phải yêu cầu nhà thầu gia hạn hiệu lực của hồ sơ dự thầu, bảo đảm dự thầu trước khi thương thảo hợp đồng",
   },
   {
     question:
@@ -1149,7 +1151,7 @@ const questions = [
       "D. Tất cả phương án A, B, C đều sai",
     ],
     answer:
-      "A. Hội đồng giải quyết kiến nghị do Sở Tài chính thành lập có trách nhiệm giải quyết kiến nghị cho",
+      "C. Người đứng đầu doanh nghiệp nhà nước tự ban hành điều kiện, quy trình về giải quyết kiến nghị trong đơn vị mình",
   },
   {
     question:
@@ -1402,7 +1404,7 @@ const questions = [
       "D. Hủy thầu",
     ],
     answer:
-      "B. Yêu cầu nhà thầu nước ngoài đăng ký khi đăng tải kết quả lựa chọn nhà thầu",
+      "A. Không cần yêu cầu nhà thầu nước ngoài đăng ký khi đăng tải kết quả lựa chọn nhà thầu",
   },
   {
     question:
@@ -1425,7 +1427,7 @@ const questions = [
       "D. Từ ngày phát hành hồ sơ mời sơ tuyển, hồ sơ mời quan tâm, hồ sơ mời thầu, hồ sơ yêu cầu kể cả sau khi đã ký hợp đồng",
     ],
     answer:
-      "D. Từ ngày phát hành hồ sơ mời sơ tuyển, hồ sơ mời quan tâm, hồ sơ mời thầu, hồ sơ yêu cầu kể cả sau khi đã ký hợp đồng",
+      "B. Từ ngày phát hành hồ sơ mời sơ tuyển, hồ sơ mời quan tâm, hồ sơ mời thầu, hồ sơ yêu cầu đến trước khi ký kết hợp đồng, thỏa thuận khung đối với mua sắm tập trung",
   },
   {
     question:
@@ -1436,8 +1438,7 @@ const questions = [
       "C. Không tiếp tục xem xét, đánh giá E-HSDT của nhà thầu",
       "D. Tiếp tục xem xét, đánh giá E-HSDT của nhà thầu và yêu cầu nhà thầu thực hiện các thủ tục để mở khóa tài khoản trước khi phê duyệt kết quả lựa chọn nhà thầu",
     ],
-    answer:
-      "D. Tiếp tục xem xét, đánh giá E-HSDT của nhà thầu và yêu cầu nhà thầu thực hiện các thủ tục để mở khóa tài khoản trước khi phê duyệt kết quả lựa chọn nhà thầu",
+    answer: "C. Không tiếp tục xem xét, đánh giá E-HSDT của nhà thầu",
   },
   {
     question:
@@ -1459,7 +1460,7 @@ const questions = [
       "C. Không công nhận kết quả lựa chọn nhà thầu",
       "D. Đình chỉ cuộc thầu",
     ],
-    answer: "B. Hủy thầu",
+    answer: "A. Hủy quyết định phê duyệt kết quả lựa chọn nhà thầu trúng thầu",
   },
   {
     question:
@@ -1493,7 +1494,7 @@ const questions = [
       "C. Không công nhận kết quả lựa chọn nhà thầu",
       "D. Phương án A và B đều đúng",
     ],
-    answer: "A. Hủy thầu",
+    answer: "C. Không công nhận kết quả lựa chọn nhà thầu",
   },
   {
     question:
@@ -1516,7 +1517,7 @@ const questions = [
       "C. Bên mời thầu",
       "D. Đơn vị tư vấn được chủ đầu tư lựa chọn",
     ],
-    answer: "B. Chủ đầu tư",
+    answer: "D. Đơn vị tư vấn được chủ đầu tư lựa chọn",
   },
   {
     question:
@@ -1527,8 +1528,7 @@ const questions = [
       "C. Quyết định việc hủy thầu khi thay đổi mục tiêu đầu tư trong quyết định đầu tư",
       "D. Quyết định việc hủy thầu, đình chỉ cuộc đấu thầu, không công nhận kết quả lựa chọn nhà thầu khi phát hiện có hành vi vi phạm pháp luật về đấu thầu",
     ],
-    answer:
-      "C. Quyết định việc hủy thầu khi thay đổi mục tiêu đầu tư trong quyết định đầu tư",
+    answer: "A. Phê duyệt kế hoạch lựa chọn nhà thầu",
   },
   {
     question:
@@ -1564,7 +1564,7 @@ const questions = [
       "C. Đàm phán giá.",
       "D. Đấu thầu rộng rãi và đàm phán giá.",
     ],
-    answer: "D. Đấu thầu rộng rãi và đàm phán giá.",
+    answer: "A. Đấu thầu rộng rãi.",
   },
   {
     question: "Câu 141 Đơn vị mua sắm tập trung:",
