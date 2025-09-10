@@ -600,7 +600,7 @@ const questions = [
       "D. Khi có yêu cầu của nhà thầu",
     ],
     answer:
-      "C. Chỉ khi dịch vụ có yếu tố đặc thù, phức tạp cần thiết phải có nhân sự có hiểu biết, nhiều kinh",
+      "C. Chỉ khi dịch vụ có yếu tố đặc thù, phức tạp cần thiết phải có nhân sự có hiểu biết, nhiều kinh nghiệm đảm nhận",
   },
   {
     question: "Câu 55. Gói thầu mua thuốc là gói thầu nào?",
