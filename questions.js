@@ -588,7 +588,7 @@ const questions = [
       "D. Hàng hóa thuộc gói thầu quá phức tạp mà nhà thầu trong nước không đáp ứng được",
     ],
     answer:
-      "C. Người có thẩm quyền xét thấy cần tổ chức đấu thầu quốc tế để mang lại hiệu quả cao hơn cho dự",
+      "C. Người có thẩm quyền xét thấy cần tổ chức đấu thầu quốc tế để mang lại hiệu quả cao hơn cho dự án, gói thầu",
   },
   {
     question:
