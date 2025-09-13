@@ -525,7 +525,7 @@ const questions = [
       "D. Tất cả các hiệp định mà Việt Nam là thành viên",
     ],
     answer:
-      "C. Hiệp định CPTPP, Hiệp định EVFTA và Hiệp định Thương mại Tự do giữa Việt Nam  và Liên",
+      "C. Hiệp định CPTPP, Hiệp định EVFTA và Hiệp định Thương mại Tự do giữa Việt Nam và Liên hiệp Vương quốc Anh và Bắc Ailen (UKVFTA)",
   },
   {
     question:
@@ -539,11 +539,10 @@ const questions = [
     options: [
       "A. Hiệp định Đối tác Toàn diện và Tiến bộ Xuyên Thái Bình Dương (CPTPP)",
       "B. Hiệp định thương mại tự do giữa Cộng hòa xã hội chủ nghĩa Việt Nam và Liên minh Châu Âu",
-      "C. Hiệp định EVFTA và Hiệp định Thương mại Tự do giữa Việt Nam  và Liên hiệp Vương quốc Anh và",
+      "C. Hiệp định EVFTA và Hiệp định Thương mại Tự do giữa Việt Nam  và Liên hiệp Vương quốc Anh và Bắc Aden (UKVFTA)",
       "D. Hiệp định Đối tác Kinh tế Toàn diện Khu vực (RCEP)",
     ],
-    answer:
-      "C. Hiệp định EVFTA và Hiệp định Thương mại Tự do giữa Việt Nam  và Liên hiệp Vương quốc Anh và",
+    answer: "D. Hiệp định Đối tác Kinh tế Toàn diện Khu vực (RCEP)",
   },
   {
     question:
