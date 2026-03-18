@@ -2,14 +2,18 @@
 const quizDiv = document.getElementById("quiz");
 const submitButton = document.getElementById("submit");
 const resultsDiv = document.getElementById("results");
+const selectElement = document.getElementById("questionCount");
 
 // Biến toàn cục để lưu trữ mảng câu hỏi đã được xáo trộn
 let shuffledQuestions = [];
 
 // Hàm để hiển thị câu hỏi
 function displayQuestions() {
+  const choice = selectElement.value;
+  count = parseInt(choice);
+  console.log(count);
   // Sắp xếp ngẫu nhiên mảng questions và lấy 40 câu đầu tiên
-  shuffledQuestions = questions.sort(() => 0.5 - Math.random()).slice(0, 40);
+  shuffledQuestions = questions.sort(() => 0.5 - Math.random()).slice(0, count);
 
   const output = [];
 
@@ -35,7 +39,7 @@ function displayQuestions() {
             </div>`,
     );
   });
-
+  // document.getElementById("setup-box").style.display = "none";
   // Hiển thị các câu hỏi lên trang web
   quizDiv.innerHTML = output.join("");
 }
@@ -85,7 +89,6 @@ function checkAnswers() {
 }
 
 // Bắt đầu hiển thị câu hỏi khi trang tải xong
-displayQuestions();
 
 // Lắng nghe sự kiện click nút "Nộp bài"
 submitButton.addEventListener("click", checkAnswers);

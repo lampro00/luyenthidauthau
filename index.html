@@ -8,10 +8,26 @@
   </head>
   <body>
     <div class="quiz-container">
+      <div class="setup-container" id="setup-box">
+        <h3>CẤU HÌNH BÀI THI</h3>
+        <label for="questionCount">Số lượng câu hỏi:</label>
+        <select id="questionCount">
+          <option value="10">10 câu hỏi</option>
+          <option value="20" selected>20 câu hỏi</option>
+          <option value="30">30 câu hỏi</option>
+          <option value="40">40 câu hỏi</option>
+          <option value="all">Tất cả câu hỏi</option>
+        </select>
+        <br /><br />
+        <button onclick="(displayQuestions(), start())" class="btn-start">
+          BẮT ĐẦU THI NGAY
+        </button>
+      </div>
       <h1>Luyện thi đấu thầu</h1>
       <div id="quiz"></div>
       <div class="timer-container">
-        <button onclick="start()">Bắt Đầu</button>
+        <button id="submit1" onclick="location.reload()">Quay Lại</button>
+        <button id="submit1" onclick="location.reload()">Thi Tiếp</button>
         <button id="submit">Nộp bài</button>
         <div class="timer-display" id="timer"></div>
       </div>
