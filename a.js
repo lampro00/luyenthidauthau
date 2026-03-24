@@ -1,5 +1,6 @@
 const questions = [
   {
+    STT: "1",
     question:
       "Trường hợp nào sau đây bắt buộc phải lựa chọn nhà thầu theo quy định tại Luật Đấu thầu?",
     options: [
@@ -11,6 +12,7 @@ const questions = [
     answer: "A",
   },
   {
+    STT: "2",
     question: "Chọn phương án đúng về phạm vi điều chỉnh của Luật Đấu thầu?",
     options: [
       "A. Quy định về quản lý nhà nước đối với hoạt động đấu thầu",
@@ -21,6 +23,7 @@ const questions = [
     answer: "D",
   },
   {
+    STT: "3",
     question:
       "Trường hợp nào sau đây không thuộc đối tượng áp dụng của Luật Đấu thầu?",
     options: [
@@ -32,6 +35,7 @@ const questions = [
     answer: "D",
   },
   {
+    STT: "4",
     question:
       "Theo quy định pháp luật về đấu thầu, gói thầu nào được xếp vào gói thầu cung cấp dịch vụ tư vấn",
     options: [
@@ -43,6 +47,7 @@ const questions = [
     answer: "B",
   },
   {
+    STT: "5",
     question: "Gói thầu nào là gói thầu cung cấp dịch vụ phi tư vấn",
     options: [
       "A. Gói thầu in sổ công tác của tỉnh A",
@@ -53,6 +58,7 @@ const questions = [
     answer: "A",
   },
   {
+    STT: "6",
     question: "Theo quy định pháp luật về đấu thầu, đấu thầu là gì?",
     options: [
       "A. Là quá trình lựa chọn nhà thầu để ký kết, thực hiện hợp đồng cung cấp dịch vụ tư vấn, dịch vụ phi tư vấn, mua sắm hàng hóa, xây lắp trên cơ sở bảo đảm cạnh tranh, công bằng, minh bạch, hiệu quả kinh tế và trách nhiệm giải trình",
@@ -63,6 +69,7 @@ const questions = [
     answer: "D",
   },
   {
+    STT: "7",
     question: "Đấu thầu quốc tế là gì?",
     options: [
       "A. Là hoạt động đấu thầu mà nhà thầu trong nước, nước ngoài được tham dự thầu",
@@ -73,6 +80,7 @@ const questions = [
     answer: "A",
   },
   {
+    STT: "8",
     question: "Giá đề nghị trúng thầu là gì?",
     options: [
       "A. Là giá dự thầu của nhà thầu ghi trong quyết định phê duyệt kết quả lựa chọn nhà thầu.",
@@ -83,6 +91,7 @@ const questions = [
     answer: "B",
   },
   {
+    STT: "9",
     question: "Theo quy định pháp luật về đấu thầu, hàng hóa gồm?",
     options: [
       "A. Máy móc, thiết bị, nguyên liệu, nhiên liệu, vật liệu, vật tư, phụ tùng; sản phẩm; phương tiện; hàng tiêu dùng, phần mềm thương mại",
@@ -93,6 +102,7 @@ const questions = [
     answer: "C",
   },
   {
+    STT: "10",
     question:
       "Trường hợp nào sau đây cơ quan, tổ chức, doanh nghiệp được tự quyết định việc lựa chọn nhà thầu trên cơ sở bảo đảm công khai, minh bạch, hiệu quả và trách nhiệm giải trình?",
     options: [
@@ -104,6 +114,7 @@ const questions = [
     answer: "D",
   },
   {
+    STT: "11",
     question:
       "Điều kiện để tổ chức đấu thầu quốc tế lựa chọn nhà thầu thực hiện gói thầu mua sắm hàng hóa là gì?",
     options: [
@@ -115,6 +126,7 @@ const questions = [
     answer: "C",
   },
   {
+    STT: "12",
     question: "Ngôn ngữ sử dụng đối với đấu thầu quốc tế là gì?",
     options: [
       "A. Tiếng Việt",
@@ -125,6 +137,7 @@ const questions = [
     answer: "C",
   },
   {
+    STT: "13",
     question:
       "Đối với đấu thầu quốc tế, trường hợp ngôn ngữ sử dụng trong hồ sơ mời thầu là tiếng Việt và tiếng Anh thì khi tham dự thầu, nhà thầu sử dụng ngôn ngữ gì?",
     options: [
@@ -136,6 +149,7 @@ const questions = [
     answer: "C",
   },
   {
+    STT: "14",
     question: "Gói thầu mua thuốc là gói thầu nào?",
     options: [
       "A. Gói thầu mua sắm hàng hóa",
@@ -146,6 +160,7 @@ const questions = [
     answer: "A",
   },
   {
+    STT: "15",
     question:
       "Nội dung nào không thuộc nội dung quản lý nhà nước đối với hoạt động đấu thầu?",
     options: [
@@ -157,6 +172,7 @@ const questions = [
     answer: "B",
   },
   {
+    STT: "16",
     question:
       "Đơn vị sự nghiệp công lập A đã trúng thầu gói thầu tổ chức lớp đào tạo cán bộ cho UBND tỉnh X sử dụng vốn ngân sách địa phương. Đơn vị sự nghiệp công lập A có phải tổ chức lựa chọn nhà thầu theo Luật Đấu thầu để thuê dịch vụ hậu cần (như địa điểm ăn nghỉ, photo tài liệu, hội trường tổ chức) hay không?",
     options: [
@@ -168,6 +184,7 @@ const questions = [
     answer: "C",
   },
   {
+    STT: "17",
     question:
       "Sở Y tế tỉnh A được doanh nghiệp trong nước tài trợ 5 tỷ đồng để mua sắm thuốc phục vụ khám chữa bệnh cho người nghèo, hỏi Sở Y tế có phải tổ chức đấu thầu thuốc theo quy định của Luật Đấu thầu không?",
     options: [
@@ -179,6 +196,7 @@ const questions = [
     answer: "A",
   },
   {
+    STT: "18",
     question: "Hãy chọn phương án đúng về đấu thầu trước?",
     options: [
       "A. Đấu thầu trước là việc thực hiện trước một số thủ tục trước khi dự án được phê duyệt đầu tư nhằm mục đích đẩy nhanh tiến độ thực hiện dự án, trừ gói thầu cần thực hiện trước khi phê duyệt dự án",
@@ -189,6 +207,7 @@ const questions = [
     answer: "A",
   },
   {
+    STT: "19",
     question: "Bảo đảm cạnh tranh trong đấu thầu thuộc nội dung đánh giá về?",
     options: [
       "A. Tư cách hợp lệ",
@@ -199,6 +218,7 @@ const questions = [
     answer: "A",
   },
   {
+    STT: "20",
     question:
       "Nhà thầu tham gia đấu thầu gói thầu hàng hóa phải độc lập với chủ thể nào sau đây?",
     options: [

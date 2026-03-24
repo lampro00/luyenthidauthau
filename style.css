@@ -130,3 +130,27 @@ button:hover {
 .btn-start:hover {
   background-color: #218838;
 }
+.v-question {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+.v-question:hover {
+  border-color: #007bff;
+  color: #007bff;
+  cursor: pointer;
+}
+#view-question {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 cột */
+  gap: 8px;
+  margin-top: 15px;
+}

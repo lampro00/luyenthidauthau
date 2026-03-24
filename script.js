@@ -3,7 +3,8 @@ const quizDiv = document.getElementById("quiz");
 const submitButton = document.getElementById("submit");
 const resultsDiv = document.getElementById("results");
 const selectElement = document.getElementById("questionCount");
-
+const Viewquestion = document.getElementById("view-question");
+const navItem = document.getElementsByClassName("v-question");
 // Biến toàn cục để lưu trữ mảng câu hỏi đã được xáo trộn
 let shuffledQuestions = [];
 
@@ -16,7 +17,7 @@ function displayQuestions() {
   shuffledQuestions = questions.sort(() => 0.5 - Math.random()).slice(0, count);
 
   const output = [];
-
+  const outputviewqs = [];
   // Duyệt qua từng câu hỏi
   shuffledQuestions.forEach((currentQuestion, questionNumber) => {
     const options = [];
@@ -33,15 +34,27 @@ function displayQuestions() {
 
     // Thêm câu hỏi và các đáp án vào mảng output
     output.push(
-      `<div class="question">
+      `<div class="question" id="${currentQuestion.STT}">
                 <p>Câu ${questionNumber + 1}: ${currentQuestion.question}</p>
                 <div class="options">${options.join("")}</div>
             </div>`,
     );
+    outputviewqs.push(
+      `<div class="v-question" id="${currentQuestion.STT}">
+            <a class="numberquestion"> ${questionNumber + 1}</a>
+            </div>`,
+    );
+    navItem.onclick = () => {
+      document
+        .getElementById(`${currentQuestion.STT}`)
+        .scrollIntoView({ behavior: "smooth", block: "center" });
+    };
   });
+
   // document.getElementById("setup-box").style.display = "none";
   // Hiển thị các câu hỏi lên trang web
   quizDiv.innerHTML = output.join("");
+  Viewquestion.innerHTML = outputviewqs.join("");
 }
 
 // Hàm chấm điểm
@@ -94,7 +107,7 @@ function checkAnswers() {
 submitButton.addEventListener("click", checkAnswers);
 
 // 1. Cấu hình ban đầu
-const totalTime = 30 * 60;
+const totalTime = 60 * 60;
 let timeLeft = totalTime;
 const timerDisplay = document.getElementById("timer");
 
