@@ -177,11 +177,22 @@ button:hover {
 
 /* Màu khi ĐÃ TÍCH CHỌN đáp án */
 .v-question.answered {
-  background-color: #28a745 !important; /* Màu xanh lá */
+  background-color: #5e5ce7 !important; /* Màu xanh lá */
   color: white !important;
-  border-color: #218838;
+  border-color: #527cd6;
 }
 
 .v-question.answered a {
   color: white;
+}
+.v-question.in_answered {
+  background-color: #e21919 !important; /* Màu xanh lá */
+  color: white !important;
+  border-color: #e21919;
+}
+
+.v-question.Co_answered {
+  background-color: #4ccc2c !important; /* Màu xanh lá */
+  color: white !important;
+  border-color: #61d652;
 }
