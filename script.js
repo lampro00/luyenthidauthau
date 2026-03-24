@@ -15,18 +15,23 @@ function displayQuestions() {
   console.log(count);
   // Sắp xếp ngẫu nhiên mảng questions và lấy 40 câu đầu tiên
   shuffledQuestions = questions.sort(() => 0.5 - Math.random()).slice(0, count);
-
+  function markAnswered(index) {
+    const navItem = document.querySelector(
+      `.v-question[data-index="${index}"]`,
+    );
+    if (navItem) navItem.classList.add("answered");
+  }
   const output = [];
   const outputviewqs = [];
   // Duyệt qua từng câu hỏi
-  shuffledQuestions.forEach((currentQuestion, questionNumber) => {
+  shuffledQuestions.forEach((currentQuestion, index) => {
     const options = [];
 
     // Tạo các nút radio cho từng đáp án
     currentQuestion.options.forEach((option) => {
       options.push(
         `<label>
-                    <input type="radio" name="question${questionNumber}" value="${option}">
+                    <input type="radio" name="question${index}" onchange="markAnswered(${index})" value="${option}" >
                     ${option}
                 </label>`,
       );
@@ -34,21 +39,17 @@ function displayQuestions() {
 
     // Thêm câu hỏi và các đáp án vào mảng output
     output.push(
-      `<div class="question" id="${currentQuestion.STT}">
-                <p>Câu ${questionNumber + 1}: ${currentQuestion.question}</p>
-                <div class="options">${options.join("")}</div>
-            </div>`,
+      `<div class="question" id="qs-${index}"> 
+      <p>Câu ${index + 1}: ${currentQuestion.question}</p>
+      <div class="options">${options.join("")}</div>
+   </div>`,
     );
+
     outputviewqs.push(
-      `<div class="v-question" id="${currentQuestion.STT}">
-            <a class="numberquestion"> ${questionNumber + 1}</a>
-            </div>`,
+      `<div class="v-question" data-index="${index}">
+      <a class="numberquestion">${index + 1}</a>
+   </div>`,
     );
-    navItem.onclick = () => {
-      document
-        .getElementById(`${currentQuestion.STT}`)
-        .scrollIntoView({ behavior: "smooth", block: "center" });
-    };
   });
 
   // document.getElementById("setup-box").style.display = "none";
@@ -56,23 +57,48 @@ function displayQuestions() {
   quizDiv.innerHTML = output.join("");
   Viewquestion.innerHTML = outputviewqs.join("");
 }
+Viewquestion.addEventListener("click", function (e) {
+  // Sử dụng .closest để đảm bảo dù click vào thẻ <a> hay <div> thì vẫn lấy được thẻ .v-question
+  const targetNav = e.target.closest(".v-question");
 
+  if (targetNav) {
+    // Lấy chỉ số index từ thuộc tính data-index hoặc id
+    const index = targetNav.getAttribute("data-index");
+    console.log("Đang cuộn đến câu hỏi số:", parseInt(index) + 1);
+
+    // Tìm thẻ div câu hỏi tương ứng
+    const targetElement = document.getElementById(`qs-${index}`);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+
+      // Hiệu ứng highlight nháy vàng để người dùng nhận biết
+      targetElement.style.backgroundColor = "#fff3cd";
+      setTimeout(() => {
+        targetElement.style.backgroundColor = "";
+      }, 800);
+    }
+  }
+});
 // Hàm chấm điểm
 function checkAnswers() {
   const questionsElements = quizDiv.querySelectorAll(".question");
   let numCorrect = 0;
 
   // Duyệt qua từng câu hỏi để kiểm tra đáp án
-  questionsElements.forEach((questionEl, questionNumber) => {
+  questionsElements.forEach((questionEl, index) => {
     const selectedOption = questionEl.querySelector(
-      `input[name="question${questionNumber}"]:checked`,
+      `input[name="question${index}"]:checked`,
     );
 
     // Kiểm tra xem người dùng đã chọn đáp án chưa
     if (selectedOption) {
       const userAnswer = selectedOption.value;
       // Lấy đáp án đúng từ mảng câu hỏi đã được xáo trộn
-      const correctAnswer = shuffledQuestions[questionNumber].answer;
+      const correctAnswer = shuffledQuestions[index].answer;
 
       if (userAnswer[0] === correctAnswer[0]) {
         numCorrect++;

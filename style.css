@@ -88,7 +88,14 @@ button:hover {
   display: flex;
   align-items: center;
 }
-
+.timer-container1 {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
 .timer-display {
   background-color: #f8d7da;
   color: #721c24;
@@ -153,4 +160,28 @@ button:hover {
   grid-template-columns: repeat(5, 1fr); /* 5 cột */
   gap: 8px;
   margin-top: 15px;
+}
+/* Màu mặc định của ô số câu hỏi */
+.v-question {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: white;
+}
+
+/* Màu khi ĐÃ TÍCH CHỌN đáp án */
+.v-question.answered {
+  background-color: #28a745 !important; /* Màu xanh lá */
+  color: white !important;
+  border-color: #218838;
+}
+
+.v-question.answered a {
+  color: white;
 }
