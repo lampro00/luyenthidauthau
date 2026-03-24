@@ -166,7 +166,6 @@ function updateTimerDisplay() {
   // Sử dụng padStart để luôn hiển thị 2 chữ số (ví dụ: 09 thay vì 9)
   timerDisplay.textContent = `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
 }
-
 /**
  * 3. Hàm bắt đầu đếm ngược
  */
