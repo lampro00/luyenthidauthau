@@ -196,3 +196,20 @@ button:hover {
   color: white !important;
   border-color: #61d652;
 }
+@media (max-width: 1300px) {
+  .timer-container1 {
+    display: none;
+  }
+  .timer-container {
+    position: fixed;
+    width: 85%;
+    height: 100px;
+    bottom: 20px;
+    top: auto;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    /* align-items: center; */
+    align-items: flex-end;
+  }
+}
