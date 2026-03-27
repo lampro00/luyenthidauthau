@@ -17,22 +17,18 @@ function displayQuestions() {
   count = parseInt(choice);
 
   // Sắp xếp ngẫu nhiên mảng questions và lấy 60 câu đầu tiên
-  if (count == 1) {
-    shuffledQuestions = questions.slice(count - 1, 60);
-  } else if (count == 2) {
-    shuffledQuestions = questions.slice(61, 120);
-  }
-  if (count == 3) {
-    shuffledQuestions = questions.slice(121, 180);
-  }
-  if (count == 4) {
-    shuffledQuestions = questions.slice(181, 240);
-  }
-  if (count == 5) {
-    shuffledQuestions = questions.slice(241, 300);
-  }
-  if (count == 6) {
-    shuffledQuestions = questions.slice(301, questions.length - 1);
+  if (count < 6) {
+    shuffledQuestions = questions.slice(
+      (360 / 6) * count - 60,
+      (360 / 6) * count - 60 + 60,
+    );
+    console.log(shuffledQuestions);
+  } else {
+    shuffledQuestions = questions.slice(
+      (360 / 6) * count - 60,
+      questions.length,
+    );
+    console.log(shuffledQuestions);
   }
   const output = [];
   const outputviewqs = [];
