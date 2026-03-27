@@ -15,10 +15,25 @@ function markAnswered(index) {
 function displayQuestions() {
   const choice = selectElement.value;
   count = parseInt(choice);
-  console.log(count);
-  // Sắp xếp ngẫu nhiên mảng questions và lấy 40 câu đầu tiên
-  shuffledQuestions = questions.sort(() => 0.5 - Math.random()).slice(0, count);
 
+  // Sắp xếp ngẫu nhiên mảng questions và lấy 60 câu đầu tiên
+  if (count == 1) {
+    shuffledQuestions = questions.slice(count - 1, 60);
+  } else if (count == 2) {
+    shuffledQuestions = questions.slice(61, 120);
+  }
+  if (count == 3) {
+    shuffledQuestions = questions.slice(121, 180);
+  }
+  if (count == 4) {
+    shuffledQuestions = questions.slice(181, 240);
+  }
+  if (count == 5) {
+    shuffledQuestions = questions.slice(241, 300);
+  }
+  if (count == 6) {
+    shuffledQuestions = questions.slice(301, questions.length - 1);
+  }
   const output = [];
   const outputviewqs = [];
   // Duyệt qua từng câu hỏi
